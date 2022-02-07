@@ -3,18 +3,18 @@ import { ChangeEvent } from 'react';
 import { useCookies } from 'react-cookie';
 import { Option } from '../../atoms/Options';
 
-interface ILanguageSelect {
+interface LanguageSelectProps {
   english: {
     name: string;
     value: string;
-  },
+  };
   portuguese: {
     name: string;
     value: string;
-  },
+  };
 }
 
-export function LanguageSelect({ english, portuguese }: ILanguageSelect) {
+export function LanguageSelect({ english, portuguese }: LanguageSelectProps) {
   const router = useRouter();
   const { locale, pathname, asPath, query } = router;
 
