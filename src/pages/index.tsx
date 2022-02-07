@@ -1,9 +1,9 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { LanguageSelect } from '../components/molecules/LanguageSelect';
+import { ChangeLanguage } from '../components/molecules/ChangeLanguage';
+import { ChangeTheme } from '../components/molecules/ChangeTheme';
 
 const Home: NextPage = () => {
   const { t } = useTranslation('common');
@@ -15,7 +15,13 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <h1>{t('title')}</h1>
-        <LanguageSelect
+        <ChangeTheme
+          system={{ name: t('system-theme'), value: 'system' }}
+          dark={{ name: t('dark-theme'), value: 'dark' }}
+          light={{ name: t('light-theme'), value: 'light' }}
+        />
+        <br />
+        <ChangeLanguage
           english={{
             name: t('english-language'),
             value: 'en',
