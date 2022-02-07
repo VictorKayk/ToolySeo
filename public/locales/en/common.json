@@ -1,5 +1,8 @@
 {
   "title": "Title",
   "english-language": "🇺🇸 English",
-  "portuguese-language": "🇧🇷 Brazilian portuguese"
+  "portuguese-language": "🇧🇷 Brazilian portuguese",
+  "system-theme": "⚙️ System",
+  "light-theme": "☀️ Light",
+  "dark-theme": "🌙 Dark"
 }
