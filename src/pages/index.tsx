@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { ChangeLanguage } from '../components/molecules/ChangeLanguage';
 import { ChangeTheme } from '../components/molecules/ChangeTheme';
+import { signIn } from 'next-auth/react';
 
 const Home: NextPage = () => {
   const { t } = useTranslation('common');
@@ -31,6 +32,10 @@ const Home: NextPage = () => {
             value: 'pt-BR',
           }}
         />
+        <br />
+        <button onClick={() => signIn('github')}>Entrar Github</button>
+        <br />
+        <button onClick={() => signIn('google')}>Entrar Gogle</button>
       </main>
     </>
   );
