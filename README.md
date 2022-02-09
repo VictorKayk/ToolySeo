@@ -1,23 +1,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/VictorKayk/repository">
+  <a href="https://github.com/VictorKayk/ToolySeo">
     <img src="./public/images/icons/128.png" alt="Logo" width="128" height="128">
   </a>
 
-<h3 align="center">repository</h3>
+<h3 align="center">ToolySeo</h3>
 
   <p align="center">
     Description
     <br />
-    <a href="https://github.com/VictorKayk/repository"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/VictorKayk/ToolySeo"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="./README_pt-br.md">PT-BR</a>
     ·
-    <a href="https://github.com/VictorKayk/repository/issues">Report Bug</a>
+    <a href="https://github.com/VictorKayk/ToolySeo/issues">Report Bug</a>
     ·
-    <a href="https://github.com/VictorKayk/repository/issues">Request Feature</a>
+    <a href="https://github.com/VictorKayk/ToolySeo/issues">Request Feature</a>
   </p>
 </div>
 
@@ -49,10 +49,10 @@
 ## About the project
 
 <div align="center">
-  <a href="https://github.com/VictorKayk/repository">
+  <a href="https://github.com/VictorKayk/ToolySeo">
     <img src="./public/images/screenshots/light-en.png" alt="Screenshot light" width="375" height="600">
   </a>
-  <a href="https://github.com/VictorKayk/repository">
+  <a href="https://github.com/VictorKayk/ToolySeo">
     <img src="./public/images/screenshots/dark-en.png" alt="Screenshot dark" width="375" height="600">
   </a>
 </div>
@@ -71,7 +71,7 @@ Description
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/VictorKayk/repository.git
+   git clone https://github.com/VictorKayk/ToolySeo.git
    ```
 2. Install packages
    ```sh
@@ -87,7 +87,7 @@ Description
 
 ## Features
 
-See the [open issues](https://github.com/VictorKayk/repository/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/VictorKayk/ToolySeo/issues) for a full list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 

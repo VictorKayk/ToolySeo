@@ -1,23 +1,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/VictorKayk/repository">
+  <a href="https://github.com/VictorKayk/ToolySeo">
     <img src="./public/images/icons/128.png" alt="Logo" width="128" height="128">
   </a>
 
-<h3 align="center">repository</h3>
+<h3 align="center">ToolySeo</h3>
 
   <p align="center">
     Descrição
     <br />
-    <a href="https://github.com/VictorKayk/repository"><strong>Explore a documentação »</strong></a>
+    <a href="https://github.com/VictorKayk/ToolySeo"><strong>Explore a documentação »</strong></a>
     <br />
     <br />
     <a href="./README.md">EN-US</a>
     ·
-    <a href="https://github.com/VictorKayk/repository/issues">Reportar Bug</a>
+    <a href="https://github.com/VictorKayk/ToolySeo/issues">Reportar Bug</a>
     ·
-    <a href="https://github.com/VictorKayk/repository/issues">Solicitar funcionalidade</a>
+    <a href="https://github.com/VictorKayk/ToolySeo/issues">Solicitar funcionalidade</a>
   </p>
 </div>
 
@@ -49,10 +49,10 @@
 ## Sobre o projeto
 
 <div align="center">
-  <a href="https://github.com/VictorKayk/repository">
+  <a href="https://github.com/VictorKayk/ToolySeo">
     <img src="./public/images/screenshots/light-pt-br.png" alt="Screenshot light" width="375" height="600">
   </a>
-  <a href="https://github.com/VictorKayk/repository">
+  <a href="https://github.com/VictorKayk/ToolySeo">
     <img src="./public/images/screenshots/dark-pt-br.png" alt="Screenshot dark" width="375" height="600">
   </a>
 </div>
@@ -71,7 +71,7 @@ Description
 
 1. Clone o repositório
    ```sh
-   git clone https://github.com/VictorKayk/repository.git
+   git clone https://github.com/VictorKayk/ToolySeo.git
    ```
 2. Instale as dependencias
    ```sh
@@ -87,7 +87,7 @@ Description
 
 ## Funcionalidades
 
-Veja a [aba de issues](https://github.com/VictorKayk/repository/issues) do projeto para uma lista completa de funcionalidade propostas (e problemas conhecidos).
+Veja a [aba de issues](https://github.com/VictorKayk/ToolySeo/issues) do projeto para uma lista completa de funcionalidade propostas (e problemas conhecidos).
 
 <!-- CONTRIBUTING -->
 
