@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { HomeTemplate } from '../components/templates/Home';
+import { Layout } from '../components/organisms/Layouts';
 
 const Home: NextPage = () => {
   const { t } = useTranslation('common');
@@ -27,7 +28,9 @@ const Home: NextPage = () => {
           href={`${process.env.NEXT_PUBLIC_WEB_URL}`}
         />
       </Head>
-      <HomeTemplate />
+      <Layout>
+        <HomeTemplate />
+      </Layout>
     </>
   );
 };
