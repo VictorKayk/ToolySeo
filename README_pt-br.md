@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/VictorKayk/ToolySeo">
-    <img src="./public/images/icons/128.png" alt="Logo" width="128" height="128">
+    <img src="./src/assets/images/big-logo.svg" alt="Logo" width="128" height="128">
   </a>
 
 <h3 align="center">ToolySeo</h3>
