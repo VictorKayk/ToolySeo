@@ -14,7 +14,7 @@ export function SearchBar({
 }: SearchBarProps) {
   return (
     <div
-      className="flex items-center justify-center gap-4 bg-color-grey-70 rounded-xl max-h-8 py-2"
+      className="flex items-center justify-center gap-1.5 bg-color-grey-70 rounded-xl max-h-8 max-w-44 py-2 text-color-white-80 hover:bg-color-pink transition-colors duration-150 delay-[10ms]"
       onClick={openWhenIsClose}
     >
       {isOpen && (
@@ -23,7 +23,7 @@ export function SearchBar({
           name="search"
           id="search"
           placeholder={placeholder}
-          className="max-w-[8rem] ml-4 max-h-5 bg-transparent placeholder:text-color-white-80 border-none outline-none"
+          className="max-w-[8rem] ml-4 max-h-5 bg-transparent text-color-white-80 placeholder:text-color-white-80 border-none outline-none"
         />
       )}
       <button className="mx-1">

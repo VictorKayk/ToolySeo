@@ -24,7 +24,7 @@ export function Navbar({ searchBarPlaceholder, toolsGroup }: NavbarProps) {
     setIsOpen((prev) => (prev === true ? prev : true));
 
   return (
-    <aside className="flex items-center flex-col gap-9 bg-secondary rounded-r-xl min-h-screen max-w-[15rem] py-5 px-7 text-color-white-80">
+    <aside className="flex items-center flex-col gap-9 bg-secondary rounded-r-xl min-h-screen max-w-[15rem] overflow-y-auto py-5 px-7 text-color-white-80">
       <NavbarHeader
         isOpen={isOpen}
         toggleOpen={toggleOpen}

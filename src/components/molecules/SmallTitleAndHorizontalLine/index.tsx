@@ -12,7 +12,7 @@ export function SmallTitleAndHorizontalLine({
       <h3 className="text-color-white-80 text-[0.75rem] text-center">
         {title}
       </h3>
-      {isOpen && <hr className="w-36 h-[1px]" />}
+      {isOpen && <hr className="w-[8.375rem] h-[1px]" />}
     </div>
   );
 }
