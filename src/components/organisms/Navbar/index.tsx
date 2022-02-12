@@ -52,7 +52,7 @@ export function Navbar({ searchBarPlaceholder, toolsGroup }: NavbarProps) {
         )}
       </aside>
       <MediaQuery minWidth={'768px'} maxWidth={'976px'}>
-        {isOpen && <div className="min-w-[6rem] h-screen"></div>}
+        {<div className="min-w-[6rem] h-screen"></div>}
       </MediaQuery>
     </>
   );
