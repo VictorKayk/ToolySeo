@@ -37,9 +37,7 @@ export function Navbar({ searchBarPlaceholder, toolsGroup }: NavbarProps) {
     <>
       <aside
         ref={navRef}
-        className={`flex md:items-center flex-col gap-6 bg-secondary rounded-b-xl md:rounded-bl-none md:rounded-r-xl min-w-full md:min-h-screen md:min-w-[6rem] md:max-w-[15rem] overflow-y-auto py-5 px-8 md:px-6 text-color-white-80 static lg:static ${
-          isOpen && 'md:absolute'
-        }`}
+        className="flex md:items-center flex-col gap-6 bg-secondary rounded-b-xl md:rounded-bl-none md:rounded-r-xl min-w-full md:min-h-screen md:min-w-[6rem] md:max-w-[15rem] overflow-y-auto py-5 px-8 md:px-6 text-color-white-80 static md:absolute lg:static"
       >
         <NavbarHeader isOpen={isOpen} toggleOpen={toggleOpen} />
         {((isOpen && isMobile) || !isMobile) && (
@@ -51,7 +49,7 @@ export function Navbar({ searchBarPlaceholder, toolsGroup }: NavbarProps) {
           />
         )}
       </aside>
-      <MediaQuery minWidth={'768px'} maxWidth={'976px'}>
+      <MediaQuery minWidth={'768px'} maxWidth={'1024px'}>
         {<div className="min-w-[6rem] h-screen"></div>}
       </MediaQuery>
     </>
