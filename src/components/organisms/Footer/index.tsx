@@ -37,6 +37,8 @@ interface FooterProps {
       linkToPage: string;
     }[];
   }[];
+  linkToGithub: string;
+  linkToTwitter: string;
 }
 
 export function Footer({
@@ -45,6 +47,8 @@ export function Footer({
   madeBy,
   copyright,
   groups,
+  linkToGithub,
+  linkToTwitter,
 }: FooterProps) {
   return (
     <footer className="w-full bg-secondary flex flex-col gap-12 rounded-t-xl p-7">
@@ -80,7 +84,7 @@ export function Footer({
           </ul>
           <ul className="flex justify-end gap-4">
             <li className="cursor-pointer">
-              <a href="https://twitter.com/VictorKayk77">
+              <a href={linkToTwitter}>
                 <Image
                   src={TwitterLogo}
                   alt="Twitter logo"
@@ -90,7 +94,7 @@ export function Footer({
               </a>
             </li>
             <li className="cursor-pointer">
-              <a href="https://github.com/VictorKayk/ToolySeo">
+              <a href={linkToGithub}>
                 <Image
                   src={GithubLogo}
                   alt="Github logo"

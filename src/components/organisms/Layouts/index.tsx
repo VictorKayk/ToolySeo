@@ -10,6 +10,7 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   const { t } = useTranslation('common');
+
   const tools = useTools();
 
   return (
@@ -53,6 +54,8 @@ export function Layout({ children }: LayoutProps) {
           }}
           copyright={t('copyright')}
           groups={tools}
+          linkToGithub="https://github.com/VictorKayk/ToolySeo"
+          linkToTwitter="https://twitter.com/VictorKayk77"
         />
       </main>
     </div>
