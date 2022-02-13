@@ -14,14 +14,13 @@ export function Layout({ children }: LayoutProps) {
   const tools = useTools();
 
   return (
-    <div className="flex flex-col items-center justify-center md:flex-row md:items-start md:justify-start md:h-screen">
+    <div className="flex flex-col items-center justify-center md:flex-row md:items-start md:justify-start">
       <Navbar
         searchBarPlaceholder={t('searchBar-placeholder')}
         groups={tools}
       />
-      <main className="h-full w-full flex flex-col items-center">
-        {children}
-
+      <div className="w-full h-screen flex flex-col items-center justify-between">
+        <main className="mb-auto">{children}</main>
         <Footer
           language={{
             english: {
@@ -57,7 +56,7 @@ export function Layout({ children }: LayoutProps) {
           linkToGithub="https://github.com/VictorKayk/ToolySeo"
           linkToTwitter="https://twitter.com/VictorKayk77"
         />
-      </main>
+      </div>
     </div>
   );
 }

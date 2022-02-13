@@ -51,72 +51,74 @@ export function Footer({
   linkToTwitter,
 }: FooterProps) {
   return (
-    <footer className="w-full bg-secondary flex flex-col gap-12 rounded-t-xl p-7">
-      <div className="flex flex-col gap-16">
-        <section className="flex flex-col gap-10">
-          <div>
-            <Image src={Logo} alt="Logo image" width={108} height={32} />
-            <p className="text-color-white-50 text-[0.75rem]">{copyright}</p>
-          </div>
-          <div className="flex flex-wrap gap-6">
-            <ChangeLanguage
-              english={language.english}
-              portuguese={language.portuguese}
-            />
-            <ChangeTheme
-              system={theme.system}
-              dark={theme.dark}
-              light={theme.light}
-            />
-          </div>
-        </section>
-        <section className="flex flex-col gap-10">
-          <ul className="flex flex-wrap gap-4 items-center justify-center text-color-white-80">
-            {groups.map((group, indexGroup) =>
-              group.items.map(({ title, linkToPage }, index) => (
-                <li key={`${group.title}-${title}-${indexGroup}-${index}`}>
-                  <LinkLocalized linkTo={linkToPage}>
-                    <a className="hover:text-color-pink">{title}</a>
-                  </LinkLocalized>
-                </li>
-              ))
-            )}
-          </ul>
-          <ul className="flex justify-end gap-4">
-            <li className="cursor-pointer">
-              <a href={linkToTwitter}>
-                <Image
-                  src={TwitterLogo}
-                  alt="Twitter logo"
-                  width={32}
-                  height={32}
-                />
-              </a>
-            </li>
-            <li className="cursor-pointer">
-              <a href={linkToGithub}>
-                <Image
-                  src={GithubLogo}
-                  alt="Github logo"
-                  width={32}
-                  height={32}
-                />
-              </a>
-            </li>
-          </ul>
-        </section>
+    <footer className="w-full bg-secondary rounded-t-xl px-7 py-8 md:py-12 flex md:justify-center">
+      <div className="w-full md:max-w-[1000px] flex flex-col items-center gap-12">
+        <div className="flex flex-col md:justify-center gap-12">
+          <section className="flex flex-col md:flex-row md:justify-between gap-10">
+            <div className="min-w-[50%]">
+              <Image src={Logo} alt="Logo image" width={108} height={32} />
+              <p className="text-color-white-50 text-[0.75rem]">{copyright}</p>
+            </div>
+            <ul className="flex flex-wrap gap-x-4 gap-y-2 md:gap-y-1 items-center justify-center text-color-white-80 md:justify-end">
+              {groups.map((group, indexGroup) =>
+                group.items.map(({ title, linkToPage }, index) => (
+                  <li key={`${group.title}-${title}-${indexGroup}-${index}`}>
+                    <LinkLocalized linkTo={linkToPage}>
+                      <a className="hover:text-color-pink">{title}</a>
+                    </LinkLocalized>
+                  </li>
+                ))
+              )}
+            </ul>
+          </section>
+          <section className="flex flex-col md:flex-row items-end md:items-center gap-10 md:gap-[4rem] md:justify-between">
+            <div className="flex flex-wrap gap-6">
+              <ChangeLanguage
+                english={language.english}
+                portuguese={language.portuguese}
+              />
+              <ChangeTheme
+                system={theme.system}
+                dark={theme.dark}
+                light={theme.light}
+              />
+            </div>
+            <ul className="flex gap-4">
+              <li className="cursor-pointer">
+                <a href={linkToTwitter}>
+                  <Image
+                    src={TwitterLogo}
+                    alt="Twitter logo"
+                    width={32}
+                    height={32}
+                  />
+                </a>
+              </li>
+              <li className="cursor-pointer">
+                <a href={linkToGithub}>
+                  <Image
+                    src={GithubLogo}
+                    alt="Github logo"
+                    width={32}
+                    height={32}
+                  />
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <span className="w-fit text-center text-color-white-80 group transition-all duration-150 delay-[10ms]">
+          {madeBy.madeWith}{' '}
+          <a
+            href={madeBy.linkTo}
+            target="_blank"
+            rel="noreferrer"
+            className="group-hover:text-color-pink group-hover:underline"
+          >
+            {madeBy.author}
+          </a>
+        </span>
       </div>
-      <span className="text-center text-color-white-80 group transition-all duration-150 delay-[10ms]">
-        {madeBy.madeWith}{' '}
-        <a
-          href={madeBy.linkTo}
-          target="_blank"
-          rel="noreferrer"
-          className="group-hover:text-color-pink group-hover:underline"
-        >
-          {madeBy.author}
-        </a>
-      </span>
     </footer>
   );
 }
