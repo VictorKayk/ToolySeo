@@ -5,5 +5,8 @@
   "system-theme": "⚙️ Sistema",
   "light-theme": "☀️ Claro",
   "dark-theme": "🌙 Escuro",
-  "searchBar-placeholder": "Procurar ferramentas..."
+  "searchBar-placeholder": "Procurar ferramentas...",
+  "made-with": "Feito com ❤️ por",
+  "author": "Victor Kayk",
+  "copyright": "Copyright © 2022 por toolyseo.com Todos os direitos reservados."
 }
