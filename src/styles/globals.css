@@ -82,3 +82,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+select {
+  cursor: pointer;
+}
