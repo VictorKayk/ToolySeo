@@ -47,7 +47,7 @@ export function Layout({ children }: LayoutProps) {
           },
         ]}
       />
-      <main>
+      <main className="h-full w-full flex flex-col items-center">
         {children}
 
         <Footer
@@ -75,6 +75,12 @@ export function Layout({ children }: LayoutProps) {
               value: 'light',
             },
           }}
+          madeBy={{
+            madeWith: t('made-with'),
+            author: t('author'),
+            linkTo: 'https://github.com/VictorKayk/ToolySeo',
+          }}
+          copyright={t('copyright')}
         />
       </main>
     </div>

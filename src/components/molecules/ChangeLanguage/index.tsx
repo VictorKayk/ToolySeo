@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { ChangeEvent } from 'react';
 import { useCookies } from 'react-cookie';
 import { Option } from '../../atoms/Options';
+import { Select } from '../../atoms/Select';
 
 interface ChangeLanguageProps {
   english: {
@@ -34,9 +35,9 @@ export function ChangeLanguage({ english, portuguese }: ChangeLanguageProps) {
   }
 
   return (
-    <select onChange={switchLanguage} defaultValue={locale}>
+    <Select onChange={switchLanguage} defaultValue={locale}>
       <Option name={english.name} value={english.value} />
       <Option name={portuguese.name} value={portuguese.value} />
-    </select>
+    </Select>
   );
 }
