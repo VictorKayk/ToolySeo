@@ -4,7 +4,7 @@ import { LinkLocalized } from '../../atoms/LinkLocalized';
 
 interface TitleIconAndLinkListProps {
   isOpen: boolean;
-  tools: {
+  items: {
     title: string;
     Icon: ReactElement;
     linkToPage: string;
@@ -13,7 +13,7 @@ interface TitleIconAndLinkListProps {
 
 export function TitleIconAndLinkList({
   isOpen,
-  tools,
+  items,
 }: TitleIconAndLinkListProps) {
   const isMobile = useMediaQuery({
     query: '(max-width: 767px)',
@@ -21,7 +21,7 @@ export function TitleIconAndLinkList({
 
   return (
     <ul className="flex justify-around flex-wrap md:justify-start md:flex-col gap-12 md:gap-8">
-      {tools.map(({ title, Icon, linkToPage }, index) => (
+      {items.map(({ title, Icon, linkToPage }, index) => (
         <li key={index}>
           <LinkLocalized linkTo={linkToPage}>
             <a className="flex flex-col md:flex-row items-center gap-4 ml-1 group">

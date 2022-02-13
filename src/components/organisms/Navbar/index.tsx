@@ -6,9 +6,9 @@ import { NavbarIconsAndSearchBar } from '../../molecules/NavbarIconsAndSearchBar
 
 interface NavbarProps {
   searchBarPlaceholder: string;
-  toolsGroup: {
+  groups: {
     title: string;
-    tools: {
+    items: {
       title: string;
       Icon: ReactElement;
       linkToPage: string;
@@ -16,7 +16,7 @@ interface NavbarProps {
   }[];
 }
 
-export function Navbar({ searchBarPlaceholder, toolsGroup }: NavbarProps) {
+export function Navbar({ searchBarPlaceholder, groups }: NavbarProps) {
   const isMobile = useMediaQuery({
     query: '(max-width: 767px)',
   });
@@ -37,20 +37,22 @@ export function Navbar({ searchBarPlaceholder, toolsGroup }: NavbarProps) {
     <>
       <aside
         ref={navRef}
-        className="flex md:items-center flex-col gap-6 bg-secondary rounded-b-xl md:rounded-bl-none md:rounded-r-xl min-w-full md:min-h-screen md:min-w-[6rem] md:max-w-[15rem] overflow-y-auto py-5 px-8 md:px-6 text-color-white-80 static md:absolute lg:static"
+        className={`flex md:items-center flex-col gap-6 bg-secondary rounded-b-xl md:rounded-bl-none md:rounded-r-xl min-w-full md:min-h-screen md:min-w-[6rem] md:max-w-[15rem] overflow-y-auto py-5 px-8 md:px-6 text-color-white-80 static ${
+          isOpen && 'md:absolute'
+        } lg:static`}
       >
         <NavbarHeader isOpen={isOpen} toggleOpen={toggleOpen} />
         {((isOpen && isMobile) || !isMobile) && (
           <NavbarIconsAndSearchBar
             isOpen={isOpen}
-            toolsGroup={toolsGroup}
+            groups={groups}
             openWhenIsClose={openWhenIsClose}
             searchBarPlaceholder={searchBarPlaceholder}
           />
         )}
       </aside>
       <MediaQuery minWidth={'768px'} maxWidth={'1024px'}>
-        {<div className="min-w-[6rem] h-screen"></div>}
+        {isOpen && <div className="min-w-[6rem] h-screen"></div>}
       </MediaQuery>
     </>
   );

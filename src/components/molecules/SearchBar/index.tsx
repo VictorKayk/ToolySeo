@@ -1,17 +1,21 @@
 import { SearchIcon } from '@heroicons/react/outline';
-import { useRef } from 'react';
+import { ChangeEvent } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 interface SearchBarProps {
   isOpen: boolean;
   openWhenIsClose: () => void;
   placeholder: string;
+  handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  value: string;
 }
 
 export function SearchBar({
   isOpen,
   openWhenIsClose,
   placeholder,
+  handleChange,
+  value,
 }: SearchBarProps) {
   const isMobile = useMediaQuery({
     query: '(max-width: 767px)',
@@ -29,6 +33,8 @@ export function SearchBar({
           id="search"
           placeholder={placeholder}
           className=" min-w-[80%] md:max-w-[8rem] md:min-w-[8rem] ml-4 max-h-5 bg-transparent text-color-white-80 placeholder:text-color-white-80 border-none outline-none"
+          onChange={handleChange}
+          value={value}
         />
       )}
       <button className="mx-1">

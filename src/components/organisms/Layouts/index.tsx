@@ -15,10 +15,10 @@ export function Layout({ children }: LayoutProps) {
     <div className="flex flex-col items-center justify-center md:flex-row md:items-start md:justify-start">
       <Navbar
         searchBarPlaceholder={t('searchBar-placeholder')}
-        toolsGroup={[
+        groups={[
           {
             title: 'Tools',
-            tools: [
+            items: [
               { title: 'tool1', Icon: <ChipIcon />, linkToPage: '/' },
               { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
               { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
@@ -29,7 +29,7 @@ export function Layout({ children }: LayoutProps) {
           },
           {
             title: 'Tools',
-            tools: [
+            items: [
               { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
               { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
               { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
@@ -38,7 +38,7 @@ export function Layout({ children }: LayoutProps) {
           },
           {
             title: 'Tools',
-            tools: [
+            items: [
               { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
               { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
               { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },

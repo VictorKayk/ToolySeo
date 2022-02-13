@@ -1,41 +1,63 @@
 import { SearchBar } from '../SearchBar';
-import { ReactElement } from 'react';
+import { ChangeEvent, ReactElement, useEffect, useState } from 'react';
 import { SmallTitleAndHorizontalLine } from '../SmallTitleAndHorizontalLine';
 import { TitleIconAndLinkList } from '../TitleIconAndLinkList';
+import { useDebounce } from 'usehooks-ts';
+
+interface IGroup {
+  title: string;
+  items: {
+    title: string;
+    Icon: ReactElement;
+    linkToPage: string;
+  }[];
+}
 
 interface NavbarIconsAndSearchBarProps {
   openWhenIsClose: () => void;
   searchBarPlaceholder: string;
-
   isOpen: boolean;
-  toolsGroup: {
-    title: string;
-    tools: {
-      title: string;
-      Icon: ReactElement;
-      linkToPage: string;
-    }[];
-  }[];
+  groups: IGroup[];
 }
 
 export function NavbarIconsAndSearchBar({
   isOpen,
-  toolsGroup,
+  groups,
   openWhenIsClose,
   searchBarPlaceholder,
 }: NavbarIconsAndSearchBarProps) {
+  const [search, setSearch] = useState('');
+  const [groupResult, setGroupResult] = useState<IGroup[]>([]);
+  const debounceValue = useDebounce(search, 500);
+
+  const handleSearch = ({ target: { value } }: ChangeEvent<HTMLInputElement>) =>
+    setSearch(value.toLowerCase());
+
+  useEffect(() => {
+    setGroupResult(
+      groups.filter((group) => {
+        if (group.title.toLowerCase().includes(debounceValue)) return true;
+        return group.items.find(({ title }) =>
+          title.toLowerCase().includes(debounceValue)
+        );
+      })
+    );
+  }, [groups, debounceValue]);
+
   return (
     <div className="flex flex-col gap-9">
       <SearchBar
         isOpen={isOpen}
         openWhenIsClose={openWhenIsClose}
         placeholder={searchBarPlaceholder}
+        handleChange={handleSearch}
+        value={search}
       />
       <nav className="text-color-white-80 flex flex-col gap-10">
-        {toolsGroup.map(({ title, tools }, index) => (
+        {groupResult.map(({ title, items }, index) => (
           <div className="flex flex-col gap-5" key={index}>
             <SmallTitleAndHorizontalLine title={title} isOpen={isOpen} />
-            <TitleIconAndLinkList isOpen={isOpen} tools={tools} />
+            <TitleIconAndLinkList isOpen={isOpen} items={items} />
           </div>
         ))}
       </nav>
