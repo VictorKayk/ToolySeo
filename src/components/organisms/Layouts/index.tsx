@@ -12,7 +12,7 @@ export function Layout({ children }: LayoutProps) {
   const { t } = useTranslation('common');
 
   return (
-    <div className="flex flex-col items-center justify-center md:flex-row md:items-start md:justify-start">
+    <div className="flex flex-col items-center justify-center md:flex-row md:items-start md:justify-start md:h-screen">
       <Navbar
         searchBarPlaceholder={t('searchBar-placeholder')}
         groups={[
@@ -78,9 +78,40 @@ export function Layout({ children }: LayoutProps) {
           madeBy={{
             madeWith: t('made-with'),
             author: t('author'),
-            linkTo: 'https://github.com/VictorKayk/ToolySeo',
+            linkTo: 'https://github.com/VictorKayk',
           }}
           copyright={t('copyright')}
+          groups={[
+            {
+              title: 'Tools',
+              items: [
+                { title: 'tool1', Icon: <ChipIcon />, linkToPage: '/' },
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+              ],
+            },
+            {
+              title: 'Tools',
+              items: [
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+              ],
+            },
+            {
+              title: 'Tools',
+              items: [
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+                { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+              ],
+            },
+          ]}
         />
       </main>
     </div>
