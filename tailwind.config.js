@@ -16,7 +16,7 @@ module.exports = {
         'color-white-80': 'var(--color-white-80)',
         'color-white-50': 'var(--color-white-50)',
       },
-      width: {
+      maxWidth: {
         maxWidth: 'var(--max-width)',
       },
     },
