@@ -52,7 +52,7 @@ export function Footer({
 }: FooterProps) {
   return (
     <footer className="w-full bg-secondary rounded-t-xl px-7 py-8 md:py-12 flex md:justify-center">
-      <div className="w-full md:w-maxWidth flex flex-col items-center gap-12">
+      <div className="w-full md:max-w-maxWidth flex flex-col items-center gap-12">
         <div className="flex flex-col md:justify-center gap-12">
           <section className="flex flex-col md:flex-row md:justify-between gap-10">
             <div className="min-w-[50%]">
