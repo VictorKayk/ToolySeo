@@ -59,7 +59,7 @@ export function Footer({
               <Image src={Logo} alt="Logo image" width={108} height={32} />
               <p className="text-color-white-50 text-[0.75rem]">{copyright}</p>
             </div>
-            <ul className="flex flex-wrap gap-x-4 gap-y-2 md:gap-y-1 items-center justify-center text-color-white-80 md:justify-end">
+            <ul className="flex flex-wrap gap-x-4 gap-y-2 md:gap-y-1 items-center justify-center text-color-white-80 md:justify-end text-[0.90rem]">
               {groups.map((group, indexGroup) =>
                 group.items.map(({ title, linkToPage }, index) => (
                   <li key={`${group.title}-${title}-${indexGroup}-${index}`}>
