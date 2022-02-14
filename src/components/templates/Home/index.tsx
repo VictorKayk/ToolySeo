@@ -15,7 +15,7 @@ interface HomeTemplateProps {
 
 export function HomeTemplate({ groups }: HomeTemplateProps) {
   return (
-    <div className="md:w-maxWidth px-4 md:px-0 flex flex-col gap-16">
+    <div className="md:max-w-maxWidth flex flex-col gap-16">
       {groups.map(({ title, description, items }) => (
         <div key={title} className="flex flex-col gap-16">
           <div>
@@ -28,7 +28,7 @@ export function HomeTemplate({ groups }: HomeTemplateProps) {
             {items.map(({ title, Icon, linkToPage }, index) => (
               <li key={index}>
                 <LinkLocalized linkTo={linkToPage}>
-                  <a className="flex flex-col md:flex-row items-center gap-4 ml-1 group">
+                  <a className="flex flex-col items-center gap-4 ml-1 group">
                     <div className="flex items-center justify-center text-color-white-80 bg-color-grey-70 w-9 h-9 rounded-[0.3125rem] rotate-45 group-hover:bg-color-pink transition-colors duration-150 delay-[10ms] shadow-md">
                       {cloneElement(Icon, {
                         width: '28',

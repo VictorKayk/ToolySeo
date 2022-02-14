@@ -57,7 +57,7 @@ export function Layout({ groups, children }: LayoutProps) {
         openWhenIsClose={openWhenIsClose}
       />
       <div className="w-full h-screen flex flex-col items-center justify-between md:ml-[6rem]">
-        <main className="mb-auto py-9">{children}</main>
+        <main className="mb-8 py-9 px-7">{children}</main>
         <Footer
           language={{
             english: {
