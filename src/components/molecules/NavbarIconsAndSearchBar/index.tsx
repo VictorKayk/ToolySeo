@@ -1,4 +1,4 @@
-import { SearchBar } from '../SearchBar';
+import { SearchBar } from '../SearchBarClose';
 import { ChangeEvent, ReactElement, useEffect, useState } from 'react';
 import { SmallTitleAndHorizontalLine } from '../SmallTitleAndHorizontalLine';
 import { TitleIconAndLinkList } from '../TitleIconAndLinkList';
@@ -16,15 +16,15 @@ interface IGroup {
 interface NavbarIconsAndSearchBarProps {
   openWhenIsClose: () => void;
   searchBarPlaceholder: string;
-  isOpen: boolean;
   groups: IGroup[];
+  isOpen: boolean;
 }
 
 export function NavbarIconsAndSearchBar({
-  isOpen,
   groups,
   openWhenIsClose,
   searchBarPlaceholder,
+  isOpen,
 }: NavbarIconsAndSearchBarProps) {
   const [search, setSearch] = useState('');
   const [groupResult, setGroupResult] = useState<IGroup[]>([]);

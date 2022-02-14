@@ -40,11 +40,6 @@ export function SearchBar({
       <button className="mx-1">
         <SearchIcon width={24} height={24} className="text-color-white-80" />
       </button>
-      {!isOpen && (
-        <span className="absolute left-20 bg-secondary rounded-xl py-4 pr-4 scale-0 group-hover:scale-100 text-color-white-80 text-[1rem] group-hover:text-color-pink transition-all origin-left duration-150 delay-[10ms]">
-          {placeholder}
-        </span>
-      )}
     </div>
   );
 }

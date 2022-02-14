@@ -29,6 +29,58 @@ export function ToolsContext({ children }: ToolsContextProps) {
         { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
         { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
         { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+      ],
+    },
+    {
+      title: t('Tools'),
+      items: [
+        { title: 'tool1', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+      ],
+    },
+    {
+      title: t('Tools'),
+      items: [
+        { title: 'tool1', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+      ],
+    },
+    {
+      title: t('Tools'),
+      items: [
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+      ],
+    },
+    {
+      title: t('Tools'),
+      items: [
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+      ],
+    },
+    {
+      title: t('Tools'),
+      items: [
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
+        { title: 'tool', Icon: <ChipIcon />, linkToPage: '/' },
       ],
     },
     {

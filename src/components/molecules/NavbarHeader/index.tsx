@@ -1,4 +1,4 @@
-import { LogoAndMenuButton } from '../../molecules/LogoAndMenuButton';
+import { LogoAndMenuButton } from '../LogoAndMenuButton';
 
 interface NavbarHeaderProps {
   isOpen: boolean;
