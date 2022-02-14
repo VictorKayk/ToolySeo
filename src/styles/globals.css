@@ -20,7 +20,7 @@
   --color-white-80: #fcfcfccc;
   --color-white-50: #fcfcfc80;
 
-  --max-width: 900px;
+  --max-width: 1000px;
 }
 
 [data-theme='dark'] {
