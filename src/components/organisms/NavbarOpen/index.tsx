@@ -32,7 +32,7 @@ export function NavbarOpen({
   return (
     <aside
       ref={navRef}
-      className={`absolute top-0 md:h-screen flex md:items-center flex-col gap-6 bg-secondary md:rounded-r-xl z-50 min-w-full min-h-screen md:min-h-screen md:min-w-[16rem] overflow-y-auto py-5 px-8 pb-20 md:py-5 md:px-4 text-color-white-80 ${
+      className={`absolute md:fixed top-0 md:h-screen flex md:items-center flex-col gap-6 bg-secondary md:rounded-r-xl z-50 min-w-full min-h-screen md:min-h-screen md:min-w-[16rem] overflow-y-auto py-5 px-8 pb-20 md:py-5 md:px-4 text-color-white-80 ${
         isHidden && 'hidden scale-0'
       }`}
     >

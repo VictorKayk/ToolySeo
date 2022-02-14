@@ -4,9 +4,12 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { HomeTemplate } from '../components/templates/Home';
 import { Layout } from '../components/organisms/Layouts';
+import { useTools } from '../hooks/useTools';
 
 const Home: NextPage = () => {
   const { t } = useTranslation('common');
+
+  const tools = useTools();
 
   return (
     <>
@@ -28,8 +31,8 @@ const Home: NextPage = () => {
           href={`${process.env.NEXT_PUBLIC_WEB_URL}`}
         />
       </Head>
-      <Layout>
-        <HomeTemplate />
+      <Layout groups={tools}>
+        <HomeTemplate groups={tools} />
       </Layout>
     </>
   );
