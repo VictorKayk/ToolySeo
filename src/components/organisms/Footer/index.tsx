@@ -56,7 +56,17 @@ export function Footer({
         <div className="flex flex-col md:justify-center gap-12">
           <section className="flex flex-col md:flex-row md:justify-between gap-10">
             <div className="min-w-[50%]">
-              <Image src={Logo} alt="Logo image" width={108} height={32} />
+              <LinkLocalized linkTo="/">
+                <a className="max-h-[32px] max-w-[108px]">
+                  <Image
+                    src={Logo}
+                    alt="Logo image"
+                    width={108}
+                    height={32}
+                    priority
+                  />
+                </a>
+              </LinkLocalized>
               <p className="text-color-white-50 text-[0.75rem]">{copyright}</p>
             </div>
             <ul className="flex flex-wrap gap-x-4 gap-y-2 md:gap-y-1 items-center justify-center text-color-white-80 md:justify-end text-[0.90rem]">
