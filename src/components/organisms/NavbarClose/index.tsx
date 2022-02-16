@@ -27,7 +27,7 @@ export function NavbarClose({
     query: '(max-width: 767px)',
   });
   return (
-    <aside className="md:fixed md:z-10 md:h-screen flex md:items-center flex-col gap-6 bg-secondary rounded-b-xl md:rounded-bl-none md:rounded-r-xl min-w-full md:min-h-screen md:min-w-[6rem] overflow-y-auto py-5 px-8 md:px-6 text-color-white-80">
+    <div className="md:fixed md:z-10 md:h-screen flex md:items-center flex-col gap-6 bg-secondary rounded-b-xl md:rounded-bl-none md:rounded-r-xl min-w-full md:min-h-screen md:min-w-[6rem] overflow-y-auto py-5 px-8 md:px-6 text-color-white-80">
       <NavbarHeader isOpen={false} toggleOpen={toggleOpen} />
       {!isMobile && (
         <NavbarIconsAndSearchBar
@@ -37,6 +37,6 @@ export function NavbarClose({
           searchBarPlaceholder={searchBarPlaceholder}
         />
       )}
-    </aside>
+    </div>
   );
 }

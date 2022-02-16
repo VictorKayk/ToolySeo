@@ -42,20 +42,22 @@ export function Layout({ groups, children }: LayoutProps) {
           (isMobile && 'hidden opacity-0')
         }`}
       ></div>
-      <NavbarOpen
-        searchBarPlaceholder={t('searchBar-placeholder')}
-        groups={groups}
-        toggleOpen={toggleOpen}
-        openWhenIsClose={openWhenIsClose}
-        handleClickOutside={handleClickOutsideNav}
-        isHidden={!isOpen}
-      />
-      <NavbarClose
-        searchBarPlaceholder={t('searchBar-placeholder')}
-        groups={groups}
-        toggleOpen={toggleOpen}
-        openWhenIsClose={openWhenIsClose}
-      />
+      <aside className="w-full md:w-auto">
+        <NavbarOpen
+          searchBarPlaceholder={t('searchBar-placeholder')}
+          groups={groups}
+          toggleOpen={toggleOpen}
+          openWhenIsClose={openWhenIsClose}
+          handleClickOutside={handleClickOutsideNav}
+          isHidden={!isOpen}
+        />
+        <NavbarClose
+          searchBarPlaceholder={t('searchBar-placeholder')}
+          groups={groups}
+          toggleOpen={toggleOpen}
+          openWhenIsClose={openWhenIsClose}
+        />
+      </aside>
       <div className="w-full h-screen flex flex-col items-center justify-between md:ml-[6rem]">
         <main className="mb-8 py-9 px-7">{children}</main>
         <Footer
