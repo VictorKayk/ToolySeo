@@ -7,7 +7,6 @@ interface PageHeadProps {
 
 export function PageHead({ title }: PageHeadProps) {
   const { asPath } = useRouter();
-  console.log(asPath);
 
   return (
     <Head>
