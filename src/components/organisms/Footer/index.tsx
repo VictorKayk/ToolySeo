@@ -39,6 +39,9 @@ interface FooterProps {
   }[];
   linkToGithub: string;
   linkToTwitter: string;
+  contactUs: { title: string; linkTo: string };
+  privacy: { title: string; linkTo: string };
+  terms: { title: string; linkTo: string };
 }
 
 export function Footer({
@@ -49,6 +52,9 @@ export function Footer({
   groups,
   linkToGithub,
   linkToTwitter,
+  contactUs,
+  privacy,
+  terms,
 }: FooterProps) {
   return (
     <footer className="w-full bg-secondary rounded-t-xl px-7 py-8 md:py-12 flex md:justify-center">
@@ -79,6 +85,21 @@ export function Footer({
                   </li>
                 ))
               )}
+              <li>
+                <LinkLocalized linkTo={contactUs.linkTo}>
+                  <a className="hover:text-color-pink">{contactUs.title}</a>
+                </LinkLocalized>
+              </li>
+              <li>
+                <LinkLocalized linkTo={privacy.linkTo}>
+                  <a className="hover:text-color-pink">{privacy.title}</a>
+                </LinkLocalized>
+              </li>
+              <li>
+                <LinkLocalized linkTo={terms.linkTo}>
+                  <a className="hover:text-color-pink">{terms.title}</a>
+                </LinkLocalized>
+              </li>
             </ul>
           </section>
           <section className="flex flex-col md:flex-row items-end md:items-center gap-10 md:gap-[4rem] md:justify-between">

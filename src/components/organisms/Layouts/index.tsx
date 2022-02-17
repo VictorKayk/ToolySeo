@@ -94,6 +94,18 @@ export function Layout({ groups, children }: LayoutProps) {
           groups={groups}
           linkToGithub="https://github.com/VictorKayk/ToolySeo"
           linkToTwitter="https://twitter.com/VictorKayk77"
+          contactUs={{
+            linkTo: '/contact-us',
+            title: t('contact-us'),
+          }}
+          privacy={{
+            linkTo: '/privacy',
+            title: t('privacy'),
+          }}
+          terms={{
+            linkTo: '/terms',
+            title: t('terms-of-service'),
+          }}
         />
       </div>
     </div>
